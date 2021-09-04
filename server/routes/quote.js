@@ -5,7 +5,7 @@ const authToken = require('./authToken');
 const User = require('../models/User');
 const Quote = require('../models/Quote');
 
-router.get('/quote', authToken, async function(req, res){
+router.get('/', authToken, async function(req, res){
 
     let filterId = [];
     let filterQuotes = [];
