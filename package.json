@@ -4,7 +4,7 @@
   "description": "This is a Twitter Clone app called Quote",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./server/server.js"
+    "dev": "nodemon ./src/server.js"
   },
   "author": "Nur Harizul Aiman",
   "license": "ISC",

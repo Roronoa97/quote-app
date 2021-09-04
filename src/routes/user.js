@@ -4,12 +4,9 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const path = require('path');
 
 const User = require('../models/User');
-
-router.get('/', function(req, res){
-    res.send('User api');
-})
 
 router.post('/login', async function(req, res){
     try{

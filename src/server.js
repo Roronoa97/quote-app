@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 // Import Routes
 const UserRoutes = require('./routes/user');
 const QuoteRoutes = require('./routes/quote');
+const PagesRoutes = require('./routes/pages');
 
 // Set Port
 const PORT = process.env.PORT || 3000;
@@ -35,6 +36,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/api/users', UserRoutes);
 app.use('/api/quotes', QuoteRoutes);
+app.use('/', PagesRoutes);
 
 
 app.listen(PORT, function(){
