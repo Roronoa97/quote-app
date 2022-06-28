@@ -29,7 +29,6 @@ router.post('/login', async function(req, res){
     }catch(err){
         res.json(err);
     }
-   
 })
 
 router.post('/register', async function(req, res){

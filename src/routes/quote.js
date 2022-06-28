@@ -12,7 +12,7 @@ router.get('/', authToken, async function(req, res){
 
     try{
         //display Following id
-        const user = await User.findById(req.user.id);
+        const user = await User.findById(req.user.id); // from authToken
         const userId = user._id;
         const followingId = user.following;
 
@@ -39,12 +39,9 @@ router.get('/', authToken, async function(req, res){
         }catch(err){
             res.json(err)
         }
-        
     }catch(err){
         res.json(err)
     }
-    
-    
 })
 
 router.post('/post', async function(req, res){
