@@ -7,7 +7,8 @@ const authToken = function(req, res, next){
 
     // IF NO TOKEN PRESENT
     if(token == null){
-        res.status(403).json({message: "Token missing"}); // return 403 (not authorized) and msg
+        res.redirect('/login');
+        // res.status(403).json({message: "Token missing"}); // return 403 (not authorized) and msg
     }
 
     jwt.verify(token, process.env.ACCESS_TOKEN, function(err, decodedUser){
